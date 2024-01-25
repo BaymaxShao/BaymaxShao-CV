@@ -65,7 +65,7 @@ sections:
         - title: Student Member
           company: Shanghai Key Laboratory of Medical Image Computing and Computer Assisted Intervention
           company_url: 'https://miccai.fudan.edu.cn/'
-          company_logo: org-gc
+          company_logo: miccai
           location: Shanghai,China
           date_start: '2022-09-01'
           date_end: ''
@@ -73,7 +73,7 @@ sections:
         - title: Student Member
           company: Laboratory of Robotics and Multibody System, Tongji University
           company_url: 'http://robotics-tongji.org/'
-          company_logo: org-x
+          company_logo: rms
           location: Shanghai,China
           date_start: '2019-11-01'
           date_end: '2022-02-01'
