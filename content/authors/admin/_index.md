@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Master of Biological Engineering
+role: Master of Biomedical Engineering
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -37,7 +37,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: MEng in Biological Engineering
+    - course: MEng in Biomedical Engineering
       institution: Academy for Engineering & Technology, Fudan University
       year: 2022~Now
     - course: BSc in Mechanical Engineering
