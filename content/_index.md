@@ -67,7 +67,7 @@ sections:
           company_url: 'https://miccai.fudan.edu.cn/'
           company_logo: org-gc
           location: Shanghai,China
-          date_start: '2022-09'
+          date_start: '2022-09-01'
           date_end: ''
           description: Researches and demonstrations of surgery navigation system and surgical robots.
         - title: Student Member
@@ -75,8 +75,8 @@ sections:
           company_url: 'http://robotics-tongji.org/'
           company_logo: org-x
           location: Shanghai,China
-          date_start: '2019-11'
-          date_end: '2022-02'
+          date_start: '2019-11-01'
+          date_end: '2022-02-01'
           description: Vision and hardware of multi-function robot for water monitoring, cleaning and regulation.
     design:
       columns: '2'
