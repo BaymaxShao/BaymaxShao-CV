@@ -3,7 +3,7 @@
 title: Liangjing Shao
 
 # Name pronunciation (optional)
-name_pronunciation: 邵良靖
+name_pronunciation: Michael Shao
 
 # Full name (for SEO)
 first_name: Liangjing
@@ -74,6 +74,11 @@ skills:
         percent: 60
         icon: cube
         icon_pack: fas
+      - name: Unity
+        description: 'Extended Reality'
+        percent: 40
+        icon: unity
+        icon_pack: fab
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -104,5 +109,6 @@ social:
 highlight_name: true
 ---
 
-I'm a master student of Academy for Engineering & Technology, Fudan Univeristy. Meanwhile, I'm also a member of <a href='https://miccai.fudan.edu.cn/'>Shanghai Key Laboratory of Medical Image Computing and Computer Assisted Intervention</a>. My research interests including <b>Robotics</b>, <b>3D Vision</b>, <b>Extended Reality</b>, and their application in Medicine. In detail, to achieve automatic, efficient and safe <i>robotic surgery</i>, I research on the technologies of perception and planning for surgical robots including pose estimation, imitation learning and path planning. Moreover, I'm also interested in <i>medical metaverse</i>, which has been a frontier topic in the field of healthcare. For this reason, I did some researches on 3D vision and Extended Reality to reconstruct and display 3D virtual avatars. <u>I'm looking for a PhD position of computer science, biological engineering or automation technology.</u>
+I'm a master student of <a href='https://faet.fudan.edu.cn/'>Academy for Engineering & Technology</a>, Fudan Univeristy. My research interests including <b>Robotics</b>, <b>3D Vision</b>, <b>Extended Reality</b>, and their application in Medicine. In detail, to achieve automatic, efficient and safe <b>robotic surgery</b>, I research on the technologies of perception and planning for surgical robots including pose estimation, imitation learning and path planning. Moreover, I'm also interested in <b>medical metaverse</b>, which has been a frontier topic in the field of healthcare. For this reason, I did some researches on 3D vision and Extended Reality to reconstruct and display 3D virtual objects (e.g. human model). 
+<i>Now my future plan is to look for a PhD position of computer science, biological engineering or automation technology.</i>
 {style="text-align: justify;"}
