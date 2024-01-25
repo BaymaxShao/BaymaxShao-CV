@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 吳健雄
+title: 邵良靖
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Liangjing Shao
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Liangjing
+last_name: Shao
 
 # Status emoji
 status:
@@ -17,11 +17,11 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Professor of Artificial Intelligence
+role: Master of Biological Engineering
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Stanford University
+  - name: Fudan University
     url: https://www.stanford.edu/
 
 # Short bio (displayed in user profile at end of posts)
@@ -30,21 +30,19 @@ bio: My research interests include distributed robotics, mobile computing and pr
 # Interests to show in About widget
 interests:
   - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Robotics
+  - 3D Vision
+  - Extended Reality
 
 # Education to show in About widget
 education:
   courses:
-    - course: PhD in Artificial Intelligence
-      institution: Stanford University
-      year: 2012
-    - course: MEng in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2009
-    - course: BSc in Artificial Intelligence
-      institution: Massachusetts Institute of Technology
-      year: 2008
+    - course: MEng in Biological Engineering
+      institution: Academy for Engineering & Technology, Fudan University
+      year: 2022~Now
+    - course: BSc in Mechanical Engineering
+      institution: School of Mechanical Engineering, Tongji University
+      year: 2018~2022
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
