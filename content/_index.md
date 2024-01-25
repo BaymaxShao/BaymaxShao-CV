@@ -176,7 +176,6 @@ sections:
       # Contact (add or remove contact options as necessary)
       email: twocatties.less@gmail.com
       phone: (+86)188 1753 5582
-      appointment_url: 'https://calendly.com'
       address:
         street: 130 Dongan Road
         city: Shanghai
