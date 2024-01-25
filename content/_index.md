@@ -174,7 +174,7 @@ sections:
       text: |-
         Welcome your message！
       # Contact (add or remove contact options as necessary)
-      email: twocatties.less@gmail.com
+      email: twocatties.less{at}gmail{dot}com
       phone: (+86)188 1753 5582
       address:
         street: 130 Dongan Road
@@ -183,10 +183,10 @@ sections:
         postcode: '200032'
         country: China
         country_code: CN
-      directions: Enter Kangquan Library from the side door; Take the elevator to the 11th floor; Find Room 1110, I'm there.
+      directions: Enter <b>Kangquan Library</b> from the side door; Take the elevator to the 11th floor; Find <b>Room 1110</b>, I'm there.
       office_hours:
         - 'Everyday 10:00 to 11:00, 13:00 to 15:30, 18:00 to 21:00'
-        - 'Contact me before meeting me at the office'
+        - 'Contact me before meeting me at the office in case that something just comes up.'
       # Choose a map provider in `params.yaml` to show a map from these coordinates
       coordinates:
         latitude: '31.1978995'
@@ -195,13 +195,13 @@ sections:
         - icon: weixin
           icon_pack: fab
           name: WeChat Me
-          link: 'https://imgse.com/i/pFmtYcV'
+          link: 'https://pic.superbed.cc/item/65b23d95792284bad62f4c70.jpg'
         - icon: twitter
           icon_pack: fab
           name: DM Me
           link: 'https://twitter.com/BaymaxShao'
       # Automatically link email and phone or display as text?
-      autolink: true
+      autolink: false
       # Email form provider
       form:
         provider: netlify
