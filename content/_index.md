@@ -191,12 +191,12 @@ sections:
       # Choose a map provider in `params.yaml` to show a map from these coordinates
       coordinates:
         latitude: '31'
-        longitude: '-121'  
+        longitude: '121'  
       contact_links:
         - icon: weixin
           icon_pack: fab
           name: WeChat Me
-          link: 'https://s11.ax1x.com/2024/01/25/pFm1jAI.jpg'
+          link: 'https://imgse.com/i/pFmtYcV'
         - icon: twitter
           icon_pack: fab
           name: DM Me
