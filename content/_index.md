@@ -69,7 +69,7 @@ sections:
           location: Shanghai,China
           date_start: '2022-09-01'
           date_end: ''
-          description: Researches and demonstrations of surgery navigation system and surgical robots.
+          description: Researches and demonstrations of <b>surgery navigation system</b> and <b>surgical robots</b>.
         - title: Student Member
           company: Laboratory of Robotics and Multibody System, Tongji University
           company_url: 'http://robotics-tongji.org/'
@@ -77,7 +77,7 @@ sections:
           location: Shanghai,China
           date_start: '2019-11-01'
           date_end: '2022-02-01'
-          description: Vision and hardware of multi-function robot for water monitoring, cleaning and regulation.
+          description: Vision module and hardware of <b>multi-function robot</b> for water monitoring, cleaning and regulation.
     design:
       columns: '2'
   - block: collection

@@ -3,7 +3,7 @@
 title: Liangjing Shao
 
 # Name pronunciation (optional)
-name_pronunciation: Michael Shao
+name_pronunciation: 
 
 # Full name (for SEO)
 first_name: Liangjing
@@ -47,7 +47,7 @@ education:
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
 skills:
-  - name: Technical
+  - name: Programing
     items:
       - name: Python
         description: 'Programing for Algorithm'
@@ -55,7 +55,7 @@ skills:
         icon: python
         icon_pack: fab
       - name: MATLAB
-        description: 'Mathematics and Drawing'
+        description: 'Programing for Mathematical Operation'
         percent: 100
         icon: calculator
         icon_pack: fas
@@ -64,6 +64,8 @@ skills:
         percent: 60
         icon: c
         icon_pack: fab
+  - name: Visualization
+    items:
       - name: Autodesk CAD
         description: '2D Drafting'
         percent: 80
@@ -110,5 +112,6 @@ highlight_name: true
 ---
 
 I'm a master student of <a href='https://faet.fudan.edu.cn/'>Academy for Engineering & Technology</a>, Fudan Univeristy. My research interests including <b>Robotics</b>, <b>3D Vision</b>, <b>Extended Reality</b>, and their application in Medicine. In detail, to achieve automatic, efficient and safe <b>robotic surgery</b>, I research on the technologies of perception and planning for surgical robots including pose estimation, imitation learning and path planning. Moreover, I'm also interested in <b>medical metaverse</b>, which has been a frontier topic in the field of healthcare. For this reason, I did some researches on 3D vision and Extended Reality to reconstruct and display 3D virtual objects (e.g. human model). 
+
 <i>Now my future plan is to look for a PhD position of computer science, biological engineering or automation technology.</i>
 {style="text-align: justify;"}
