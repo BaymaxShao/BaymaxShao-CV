@@ -11,7 +11,7 @@ last_name: Shao
 
 # Status emoji
 status:
-  icon: ☕️
+  icon: 🎓
 
 # Is this the primary user of the site?
 superuser: true
@@ -22,7 +22,7 @@ role: Master of Biological Engineering
 # Organizations/Affiliations to show in About widget
 organizations:
   - name: Fudan University
-    url: https://www.stanford.edu/
+    url: https://www.fudan.edu.cn/
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
@@ -54,16 +54,11 @@ skills:
         percent: 80
         icon: python
         icon_pack: fab
-      - name: Data Science
+      - name: MATLAB
         description: ''
-        percent: 100
-        icon: chart-line
-        icon_pack: fas
-      - name: SQL
-        description: ''
-        percent: 40
-        icon: database
-        icon_pack: fas
+        percent: 80
+        icon: matlab
+        icon_pack: fab
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
