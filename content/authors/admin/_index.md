@@ -114,4 +114,7 @@ highlight_name: true
 I'm a master student of <a href='https://faet.fudan.edu.cn/'>Academy for Engineering & Technology</a>, Fudan Univeristy. My research interests including <b>Robotics</b>, <b>3D Vision</b>, <b>Extended Reality</b>, and their application in Medicine. In detail, I research on the technologies of perception and planning for automatic, efficient and safe <b>robotic surgery</b>, including <i>pose estimation</i>, <i>imitation learning</i> and <i>path planning</i>. Moreover, I'm also interested in <b>medical metaverse</b>, which has been a cutting-edge topic in the field of healthcare. For this reason, I did some researches on <i>3D vision</i> and <i>Extended Reality</i> to reconstruct and display 3D virtual objects (e.g. human model). 
 
 <u>Now my future plan is to look for a PhD position of computer science, biological engineering or automation technology.</u>
+
+<h2>Awards</h2>
+
 {style="text-align: justify;"}
