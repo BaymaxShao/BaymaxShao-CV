@@ -115,6 +115,4 @@ I'm a master student of <a href='https://faet.fudan.edu.cn/'>Academy for Enginee
 
 <u>Now my future plan is to look for a PhD position of computer science, biological engineering or automation technology.</u>
 
-<h2>Awards</h2>
-
 {style="text-align: justify;"}

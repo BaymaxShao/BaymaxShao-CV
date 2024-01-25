@@ -43,7 +43,7 @@ sections:
       title: Welcome!!!
       # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
-      
+
   - block: skills
     content:
       title: Skills
@@ -187,11 +187,11 @@ sections:
       directions: Enter Kangquan Library from the side door; Take the elevator to the 11th floor; Find Room 1110, I'm there.
       office_hours:
         - 'Everyday 10:00 to 11:00, 13:00 to 15:30, 18:00 to 21:00'
-        - 'Contact me before meet me at the office'
+        - 'Contact me before meeting me at the office'
       # Choose a map provider in `params.yaml` to show a map from these coordinates
       coordinates:
-        latitude: '37.4275'
-        longitude: '-122.1697'  
+        latitude: '31'
+        longitude: '-121'  
       contact_links:
         - icon: weixin
           icon_pack: fab
