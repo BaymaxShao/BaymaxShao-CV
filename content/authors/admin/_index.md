@@ -50,34 +50,30 @@ skills:
   - name: Technical
     items:
       - name: Python
-        description: ''
+        description: 'Programing for Algorithm'
         percent: 80
         icon: python
         icon_pack: fab
       - name: MATLAB
-        description: ''
-        percent: 80
-        icon: matlab
-        icon_pack: fab
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking
-        description: ''
-        percent: 60
-        icon: person-hiking
-        icon_pack: fas
-      - name: Cats
-        description: ''
+        description: 'Mathematics and Drawing'
         percent: 100
-        icon: cat
-        icon_pack: fas
-      - name: Photography
-        description: ''
+        icon: calculator
+        icon_pack: fab
+      - name: C++
+        description: 'Programing for Robot Manipulation'
+        percent: 60
+        icon: c
+        icon_pack: fab
+      - name: Autodesk CAD
+        description: '2D Drafting'
         percent: 80
-        icon: camera-retro
-        icon_pack: fas
+        icon: compass-drafting
+        icon_pack: fab
+      - name: Solidworks
+        description: '3D Modeling'
+        percent: 60
+        icon: cube
+        icon_pack: fab
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
