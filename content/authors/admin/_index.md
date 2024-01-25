@@ -1,9 +1,9 @@
 ---
 # Display name
-title: 邵良靖
+title: Liangjing Shao
 
 # Name pronunciation (optional)
-name_pronunciation: Liangjing Shao
+name_pronunciation: 邵良靖
 
 # Full name (for SEO)
 first_name: Liangjing
@@ -25,7 +25,7 @@ organizations:
     url: https://www.fudan.edu.cn/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include Robotics, 3D Vision, Extended Reality. I'm now focus on their application into robotic surgery and medical metaverse.
 
 # Interests to show in About widget
 interests:
@@ -58,7 +58,7 @@ skills:
         description: 'Mathematics and Drawing'
         percent: 100
         icon: calculator
-        icon_pack: fab
+        icon_pack: fas
       - name: C++
         description: 'Programing for Robot Manipulation'
         percent: 60
@@ -68,12 +68,12 @@ skills:
         description: '2D Drafting'
         percent: 80
         icon: compass-drafting
-        icon_pack: fab
+        icon_pack: fas
       - name: Solidworks
         description: '3D Modeling'
         percent: 60
         icon: cube
-        icon_pack: fab
+        icon_pack: fas
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -83,7 +83,7 @@ social:
   - icon: envelope
     icon_pack: fas
     link: '/#contact'
-  - icon: googlescholar
+  - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=_RCqQiAAAAAJ&hl=zh-CN
   - icon: researchgate
@@ -104,5 +104,5 @@ social:
 highlight_name: true
 ---
 
-Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I'm a master student of Academy for Engineering & Technology, Fudan Univeristy. Meanwhile, I'm also a member of <a href='https://miccai.fudan.edu.cn/'>Shanghai Key Laboratory of Medical Image Computing and Computer Assisted Intervention</a>. My research interests including <b>Robotics</b>, <b>3D Vision</b>, <b>Extended Reality</b>, and their application in Medicine. In detail, to achieve automatic, efficient and safe <i>robotic surgery</i>, I research on the technologies of perception and planning for surgical robots including pose estimation, imitation learning and path planning. Moreover, I'm also interested in <i>medical metaverse</i>, which has been a frontier topic in the field of healthcare. For this reason, I did some researches on 3D vision and Extended Reality to reconstruct and display 3D virtual avatars. <u>I'm looking for a PhD position of computer science, biological engineering or automation technology.</u>
 {style="text-align: justify;"}
