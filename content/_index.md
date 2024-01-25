@@ -190,8 +190,8 @@ sections:
         - 'Contact me before meeting me at the office'
       # Choose a map provider in `params.yaml` to show a map from these coordinates
       coordinates:
-        latitude: '31'
-        longitude: '121'  
+        latitude: '31.19'
+        longitude: '121.45'  
       contact_links:
         - icon: weixin
           icon_pack: fab
