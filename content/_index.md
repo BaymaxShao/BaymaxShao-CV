@@ -77,7 +77,7 @@ sections:
           location: Shanghai,China
           date_start: '2019-11-01'
           date_end: '2022-02-01'
-          description: Vision module and hardware of <b>multi-function robot</b> for water monitoring, cleaning and regulation.
+          description: Vision algorithm and hardware of <b>multi-function robot</b> for water monitoring, cleaning and regulation.
     design:
       columns: '2'
   - block: collection
@@ -87,7 +87,7 @@ sections:
       subtitle: ''
       text: ''
       # Choose how many pages you would like to display (0 = all pages)
-      count: 5
+      count: 2
       # Filter on criteria
       filters:
         folders:
