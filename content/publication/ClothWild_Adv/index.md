@@ -1,5 +1,5 @@
 ---
-title: "Artificial intelligence generated content (AIGC) in medicine: A narrative review"
+title: "3D Clothed Human Reconstruction with Integration of Transformer and CNN"
 authors:
 - admin
 - Xinhan Di
