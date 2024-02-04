@@ -107,7 +107,7 @@ sections:
       columns: '2'
       view: citation
 
-- block: portfolio
+  - block: portfolio
     id: projects
     content:
       title: Projects
@@ -130,8 +130,8 @@ sections:
       view: showcase
       # For Showcase view, flip alternate rows?
       flip_alt_rows: false
-
-- block: collection
+  
+  - block: collection
     id: posts
     content:
       title: Recent Posts
