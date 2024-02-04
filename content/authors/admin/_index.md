@@ -17,7 +17,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Master of Biomedical Engineering
+role: Master Student of Biomedical Engineering
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -40,7 +40,7 @@ education:
     - course: MEng in Biomedical Engineering
       institution: Academy for Engineering & Technology, Fudan University
       year: 2022~Now
-    - course: BSc in Mechanical Engineering
+    - course: BEng in Mechanical Engineering
       institution: School of Mechanical Engineering, Tongji University
       year: 2018~2022
 

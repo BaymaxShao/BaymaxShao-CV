@@ -34,7 +34,7 @@ summary:
 
 tags:
 - 3D Human Reconstruction
-featured: true
+featured: false
 
 # links:
 # - name: ""
