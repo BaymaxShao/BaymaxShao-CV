@@ -87,7 +87,7 @@ sections:
   - block: collection
     id: featured
     content:
-      title: Selected Publications
+      title: Featured Publications
       filters:
         folders:
           - publication
@@ -134,8 +134,8 @@ sections:
   - block: collection
     id: posts
     content:
-      title: Recent Posts
-      subtitle: ''
+      title: Posts
+      subtitle: 'Sharing knowledge'
       text: ''
       # Choose how many pages you would like to display (0 = all pages)
       count: 2

@@ -39,7 +39,7 @@ featured: false
 # links:
 # - name: ""
 #   url: ""
-url_pdf: 'https://sites.google.com/view/t4v-cvpr23/home'
+url_pdf: 'https://sites.google.com/view/t4v-cvpr23/papers'
 url_code: ''
 url_dataset: ''
 url_poster: ''
