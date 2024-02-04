@@ -25,7 +25,7 @@ publication_types: ["conference-paper"]
 
 # Publication name and optional abbreviated publication name.
 publication: "*CVPR 2023 Workshop: Transformers for Vision*"
-publication_short: "T4V @ CVPR 2023"
+publication_short: "T4V @ CVPR 2023 Workshops"
 
 abstract: Much progress has been made in 3D clothed human reconstruction from in-the-wild images. However, for body with challenged poses and occlusion of the clothes, the past methods reconstruct worn clothes based on representation of clothes latent code from convolution. Therefore, in order to fill the breakage of these clothes, we propose adaptive integration of convolution and transformer for the representation of the clothes, as convolution can strength inductive bias while self-attention has the ability to gather information from large context field. Compared with the state-of-the-art models on the MSCOCO and 3DPW datasets, our work produces more accurate and corresponding results that reconstructs intact clothes for ill-pose situations.
 
@@ -34,7 +34,7 @@ summary:
 
 tags:
 - 3D Human Reconstruction
-featured: false
+featured: true
 
 # links:
 # - name: ""
