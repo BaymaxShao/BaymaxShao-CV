@@ -97,6 +97,7 @@ sections:
   #     view: compact
 
   - block: collection
+    id: pub
     content:
       title: Publications
       filters:
