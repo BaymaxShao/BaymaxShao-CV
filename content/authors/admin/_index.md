@@ -115,4 +115,6 @@ I'm a master student of <a href='https://faet.fudan.edu.cn/'>Academy for Enginee
 
 <u>Now my future plan is to look for a PhD position of computer science, biological engineering or automation technology.</u>
 
+(Also welcome to my <a href='https://baymaxshao-life.netlify.app/'>Blog Site (in Chinese)</a>, recording memories of my life, solutions of interesting questions from <a href='https://leetcode.cn/'>Leetcode</a>)
+
 {style="text-align: justify;"}
