@@ -84,17 +84,17 @@ sections:
     design:
       columns: '2'
 
-  - block: collection
-    id: featured
-    content:
-      title: Publications
-      filters:
-        folders:
-          - publication
-        featured_only: true
-    design:
-      columns: '2'
-      view: compact
+  # - block: collection
+  #   id: featured
+  #   content:
+  #     title: Publications
+  #     filters:
+  #       folders:
+  #         - publication
+  #       featured_only: true
+  #   design:
+  #     columns: '2'
+  #     view: compact
 
   - block: collection
     content:
@@ -105,7 +105,7 @@ sections:
         exclude_featured: false
     design:
       columns: '2'
-      view: citation
+      view: compact
 
   - block: portfolio
     id: projects
