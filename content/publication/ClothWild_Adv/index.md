@@ -53,7 +53,7 @@ url_video: ''
 image:
   placement: 1
   caption: ''
-  focal_point: "center"
+  focal_point: "Center"
   preview_only: false
 
 # Associated Projects (optional).
