@@ -39,55 +39,49 @@ categories:
   - Basic Learning
 ---
 
-# **1 基本概念以及对比**
+# **1 Basic Conception and Characteristics**
 
-1. **集合**set：`set = {a, b, c, ‘d', ...}`
+1. **Set**：`set = {a, b, c, ‘d', ...}`
 
-   - 可以包含**多种数据类型**
-   - 元素是**无序**的，**不含有重复元素，会自动覆盖**
-   - 在程序语言中并**不直接体现**，是其他数据结构的基础
+    - It can consist of **multiple categories of data**
+    - The elements are **unordered**
+    - It **doesn't contain duplicate elements**, which will be automatically overwritten**
+    - In programming languages, it does not directly reflect * * and is the foundation of other data structures
 
-2. **列表**list：`list = [a1, a2, 'a3', ...]`
+2. **List**：`list = [a1, a2, 'a3', ...]`
 
-   - 可以包含**多种数据类型**
-   - 元素是**有序**的
-   - **长度可变**，可以进行增删操作
-   - 特殊的列表形式：**栈与队列**  
+   - It can consist of **multiple categories of data**
+   - The elements are **ordered**
+   - **Variable length**, which means elements can be added or deleted 
 
-3. **数组**array：`array = [a[0], a[1], a[2], ...]`
+3. **Array**：`array = [a[0], a[1], a[2], ...]`
 
-   - 仅包含**一种数据类型**
-
-   - 元素是**有序**的
-
-   - 连续存储，只记录首位元素的地址
-
-   - 数组是**列表的表现形式**之一，在**Python**中数组表示为**列表类型**
+   - It can consist of **only one category of data: number**
+   - The elements are **ordered**
+   - Continuous storage, only recording the address of the first element
+   - In Python, an Array is represented as a List.
    
-   - 与列表的**关键不同点**：数组具有**索引**     
-   
-4. **字典**dictionary： `dict = {key1:val1, key2:val2, ...}`
+4. **Dictionary**： `dict = {key1:val1, key2:val2, ...}`
 
-   - 可以包含**多种数据类型**
-   - 元素是**无序**的
-   - 实现**哈希表**的数据结构，利用**键`keyi`**查询对应的**值`vali=dict[keyi]`**
+   - It can consist of **multiple categories of data**
+   - The elements are **unordered**
+   - **value`vali=dict[keyi]`** can be queried by **key`keyi`**
 
-5. **元组**tuple：`tuple = (obj[0], obj[1], [obj[2][0], obj[2][1], ...])`
+5. **Tuple**：`tuple = (obj[0], obj[1], [obj[2][0], obj[2][1], ...])`
 
-   - 可以包含**多种数据类型**
-   - 元素是**有序**的
-   - 元组不可更改，**不可直接对元素赋值**，但元组中**元素（比如`obj[2]`这样的数组或者字典等类型）的元素**可以更改
+   - It can consist of **multiple categories of data**
+   - The elements are **ordered**
+   - The element **cannot be directly assigned a value**. However, the element in the tuple (such as a list or dictionary `obj [2]`) can be changed
 
-# 2 Python中各种数据结构的操作
+# 2 Operations
 
-## 2.1 列表list
+## 2.1 List
 
-### 1.创建列表
+### *2.1.1. Creation*
 
-- 创建方式：
-  - `list=[]`创建空列表
+  - `list=[]`: Create null list.
   
-  - `list=[a0] * N`创建具有`N`个初始化值为`a0`的元素的列表
+  - `list=[a0] * N`: Create a list of `N` elements with an initialization value of `a0`
   
     ```python
     s = [0] * 5
@@ -96,17 +90,17 @@ categories:
     [0, 0, 0, 0, 0]
     ```
 
-### 2.索引列表元素
+### *2.1.2. Index*
 
-- 索引方式`index=start:stop:step`或`index=num`
+- `index=start:stop:step` or `index=num`
   
   ```python
   s = [1,2,3,4,5]
   ```
   
-  - `start`为起始索引（默认为首位），`stop`为结束索引（默认为尾位+1），`step`为索引步长，最后最多只索引到**stop-1**
-  
-  - 索引序列为：{start, start**+step**, start**+2*step**, ..., start**+n\*step**, **stop-1** }，若start+ **(n+1)\*step** > **stop-1** ，则最后一项为start+ **n\*step**
+  - `start`: starting index（**default**: 0, **minimum value**: 0, **maximum value**: length of the list），
+  - `stop`: ending index（**default**: length of the list+1, **minimum value**: 0, **maximum value**: length of the list+1），
+  - `step`: step size，**sequence of indexes**：{start, start**+step**, start**+2\*step**, ..., start**+n\*step**, **?**}，if start+ **(n+1)\*step** > **stop-1** ，the last index: start+ **n\*step**
   
     ```python
     print(s[0:3])
@@ -134,7 +128,7 @@ categories:
     [5, 4, 3, 2, 1]
     ```
   
-  - 列表索引序列为{0, 1, 2, ..., 列表长度-1}或{-列表长度, ..., -2, -1}
+  - index of a list can be in {0, 1, 2, ..., length of the list-1} or {-length of the list, ..., -2, -1}
   
     ```python
     print(s[-2])
@@ -146,7 +140,7 @@ categories:
     4
     ```
   
-  - `:`表示索引列表的所有元素，`list[a:]`表示从下标a索引到列表末尾，`list[::-1]`索引`list`对应的的逆序列表
+  - `:` represents **ALL**，`list[a:]` indicates all elements whose index $\geq$ `a`，`list[::-1]` indicates reversed `list`
   
     ```python
     print(s[2:])
@@ -158,9 +152,9 @@ categories:
     [3, 4, 5]
     ```
 
-### 3.向列表中填充元素
+### *2.1.3. Adding elements*
 
-- `list.append(obj)` 在列表末尾添加新的对象，只接受一个参数，参数可以是任何数据类型，被追加的元素在 list 中保持着原结构类型。
+- `list.append(obj)`: Add a new object at **the end** of the list, taking **only one parameter**, which can be any data type. The added element **keeps its original structural type** in the list。
 
   ```python
   s = [1, 2, 3]
@@ -176,11 +170,9 @@ categories:
   [1, 2, 3, [5, 6]]
   ```
 
-  常和`list.pop(obj)`搭配实现**栈的后入先出**
-
-- `list.extend(seq)` 在列表末尾一次性追加另一个列表序列`seq`中的多个值
+- `list.extend(seq)`: Add **all elements** from another list sequence `seq` at **the end** of the list at once
   
-  常用来利用新列表拓展原列表
+  Commonly used to expand the original list with a new list
   
   ```python
   s1 = [1, 2, 3]
@@ -191,7 +183,7 @@ categories:
   [1, 2, 3, 4, 5]
   ```
   
-- `list.insert(index, obj)` 在索引为 `index` 位置插入 `obj`。
+- `list.insert(index, obj)`: Insert a `obj` at the index position `index`。
 
   ```python
   s = [1,2,4]
@@ -201,9 +193,9 @@ categories:
   [1, 2, 3, 4]
   ```
 
-### 4.从列表中消除元素
+### *2.1.4. Removing elements*
 
-- `list.remove(obj)` 移除列表中`obj`的**第一个匹配项**
+- `list.remove(obj)`: Remove the first match of `obj` from the list.
 
   ```python
   s = [1,2,4,3,4]
@@ -213,7 +205,7 @@ categories:
   [1, 2, 3, 4]
   ```
 
-- `list.pop(index)` 移除列表中索引为`index`的元素（默认最后一个元素），**并且返回该元素的值**
+- `list.pop(index)`: Remove the element with index `index` from the list (**default**: the last element) and **return the value** of that element
 
   ```python
   s = [1,2,4,3,4]
@@ -223,7 +215,7 @@ categories:
   4 [1, 2, 3, 4]
   ```
 
-- `del list[index]` 删除单个或多个对象。
+- `del list[index]`: Delete single or multiple elements.
 
   ```python
   s = [1, 2, 4, 5, 3, 4, 5]
@@ -233,9 +225,9 @@ categories:
   [1, 2, 3, 4, 5]
   ```
 
-### 5.查找元素与统计元素数目
+### *2.1.5. Searching or Counting*
 
-- `list.count(obj)`统计某个元素在列表中出现的次数
+- `list.count(obj)`: Count the number of times an element appears in the list
 
   ```python
   s = [1, 3, 4, 3, 4, 5, 6, 4]
@@ -244,7 +236,7 @@ categories:
   3
   ```
 
-- `list.index(x, start, end)`从列表中找出某个值**第一个匹配项**的索引位置，`start`不写默认为0，`end`不写默认为列表末尾
+- `list.index(x, start, end)`: Find the index position of the first matching item of a certain value from the list. `start` defaults to 0, and `end` defaults to the end of the list
 
   ```python
   s = [1, 3, 4, 3, 4, 5, 6, 4]
@@ -264,9 +256,9 @@ categories:
   4
   ```
 
-### 6.排列列表元素：反向与排序
+### *2.1.6. Arrangement*
 
-- `list.reverse()`反向列表中元素
+- `list.reverse()`: Reverse the list
 
   ```python
   s = [1, 2, 3, 4, 5]
@@ -276,7 +268,7 @@ categories:
   [5, 4, 3, 2, 1]
   ```
 
-- `list.sort(key=None, reverse=False)`对原列表进行排序
+- `list.sort(key=None, reverse=False)`: Sort the elements in the list
   
   ```python
   s = [4, 2, 5, 3, 1]
@@ -286,7 +278,7 @@ categories:
   [1, 2, 3, 4, 5]
   ```
   
-  - 默认升序，`reverse=True`则降序排列。
+  - Default: ascend order，`reverse=True`: descend order。
   
     ```python
     s = [4, 2, 5, 3, 1]
@@ -296,7 +288,7 @@ categories:
     [5, 4, 3, 2, 1]
     ```
   
-  - key为排序参考，适用于列表元素为列表（二维列表）的情况
+  - `key` is a sorting reference, suitable for situations where the list element is a list (two-dimensional list)
   
     ```python
     s = [[4, 'a'], [2, 'b'], [5, 'c'], [3, 'd'], [1, 'e']]
@@ -306,16 +298,14 @@ categories:
     [[1, 'e'], [2, 'b'], [3, 'd'], [4, 'a'], [5, 'c']]
     ```
 
-### 7.常用操作符
-
-- 列表常用操作符
+### *2.1.7. Common Operators*
 
   ```python
   s1 = [1, 2, 3]
   s2 = [4, 5, 6]
   ```
 
-  - `+` -- `list = list1+list2`，将`list1`和`list2`拼接成新列表`list = list1.extend(list2)`
+  - `+` -- `list = list1+list2`: Splice `list1` and `list2` into a new list `list = list1.extend(list2)`
 
     ```python
     s = s1 + s2
@@ -324,7 +314,7 @@ categories:
     [1, 2, 3, 4, 5, 6]
     ```
 
-  - `*`-- `list = list1*3`，将`list1`的内容复制三份并拼接成新列表`list = list1.extend(list1.extend(list1))`，支持自乘`*=`运算
+  - `*` -- `list = list1*3`: Create three copies of `list1` and concatenate them into a new list `list = list1.extend(list1.extend(list1))`，supporting self-multiplication `*=`
 
     ```python
     s = s1 * 3
@@ -338,7 +328,7 @@ categories:
     [1, 2, 3, 1, 2, 3]
     ```
 
-  - `in`和`not in` -- `res = obj in list` 和 `res = obj not in list`, 判断元素`obj`是否在或着不在列表`list`中，返回`bool`值`res = True`或`res = False`
+  - `in` and `not in` -- `res = obj in list` and `res = obj not in list`: Judge whether `obj` is in `list` or not，return bool value `res = True` or `res = False`
 
     ```python
     print(4 in s2)
@@ -358,11 +348,11 @@ categories:
     True
     ```
 
-## 2.2 字符串str
+## 2.2 String
 
-### 1.字符串大小写转换
+### *2.2.1. Toggle Case*
 
-- `str.capitalize()`将字符串的第一个字符转换为大写，其他字母转换为小写，并返回转换后的字符串。
+- `str.capitalize()`: Convert the first character of the string to uppercase, the other letters to lowercase, and return the converted string.
 
   ```python
   s = 'i Love You'
@@ -371,7 +361,7 @@ categories:
   'I love you'
   ```
 
-- `str.lower() `转换字符串中所有大写字符为小写，并返回转换后的字符串，无大写字母返回原字符串
+- `str.lower()`: Convert all uppercase characters in the string to lowercase and return the converted string. If there are no uppercase letters, return the original string
 
   ```python
   s = 'I Love You'
@@ -380,7 +370,7 @@ categories:
   'i love you'
   ```
 
-- `str.upper() `转换字符串中的小写字母为大写，并返回转换后的字符串，无小写字母返回原字符串
+- `str.upper()`: Convert all lowercase characters in the string to uppercase and return the converted string. If there are no lowercase letters, return the original string
 
   ```python
   s = 'I Love You'
@@ -389,7 +379,7 @@ categories:
   'I LOVE YOU'
   ```
 
-- `str.swapcase()` 将字符串中大写转换为小写，小写转换为大写，并返回转换后的字符串。
+- `str.swapcase()`: Convert uppercase to lowercase, lowercase to uppercase, and return the converted string.
 
   ```python
   s = 'I Love You'
@@ -398,9 +388,9 @@ categories:
   'i lOVE yOU'
   ```
 
-### 2.检索字符串中的字符
+### *2.2.2. Checking Characters*
 
-- `str.count(str, beg=0, end=len(string)) `返回`str`在字符串里面出现的次数，如果`beg`或者`end`指定则返回指定范围$[begin, end-1)$内`str`出现的次数。
+- `str.count(str, beg=0, end=len(string))`: Return the number of times `str` appears in a string. If `beg` or `end` is specified, returns the number of times `str` appears within the specified range of $[begin, end-1)$.
 
   ```python
   s = 'I Love You'
@@ -417,7 +407,8 @@ categories:
   0
   ```
 
-- `str.endswith(suffix, beg=0, end=len(string))` 检查字符串是否以指定子字符串 `suffix` 结束，如果是，返回 `True`，否则返回 `False`。如果 `beg` 和 `end` 指定值，则在指定范围$[begin, end-1)$内检查。
+- `str.endswith(suffix, beg=0, end=len(string))`: Check if the string ends with the specified substring `suffix`. If so, return `True`; otherwise, return `False`. If `beg` or `end` is specified, returns the number of times `str` appears within the specified range of $[begin, end-1)$.
+
 
   ```python
   s = 'I Love You'
@@ -442,7 +433,7 @@ categories:
   True
   ```
 
-- `str.startswith(substr, beg=0,end=len(string)) `检查字符串是否以指定子字符串 `substr` 开头，如果是，返回 `True`，否则返回 `False`。如果 `beg` 和 `end` 指定值，则在指定范围$[begin, end-1)$内检查。
+- `str.startswith(substr, beg=0,end=len(string)) `: Check if the string begins with the specified substring `substr`. If so, return `True`; otherwise, return `False`. If `beg` or `end` is specified, returns the number of times `str` appears within the specified range of $[begin, end-1)$.
 
   ```python
   s = 'I Love You'
@@ -459,7 +450,7 @@ categories:
   False
   ```
 
-- `str.find(str, beg=0, end=len(string))` 检测 `str` 是否包含在字符串中，如果指定范围 `beg` 和 `end`，则检查是否包含在指定范围内，如果包含，返回开始的索引值，否则返回 -1。
+- `str.find(str, beg=0, end=len(string))`: Check if `str` is included in the string. If the ranges `beg` and `End` are specified, check if they are included. If they are, return the starting index value. Otherwise, return `-1`.
 
   ```python
   s = 'I Love You'
@@ -476,7 +467,7 @@ categories:
   -1
   ```
 
-- `str.rfind(str, beg=0,end=len(string))` 类似于 `find() `函数，不过是从右边开始查找。
+- `str.rfind(str, beg=0,end=len(string))` is similar to `find() `，but it check **from the right**。
 
   ```python
   s = 'I Love You'
@@ -493,7 +484,7 @@ categories:
   -1
   ```
 
-- `str.isnumeric()` 如果字符串中只包含数字字符，则返回 True，否则返回 False。
+- `str.isnumeric()`: If the string contains only numeric characters, return `True`; otherwise, return `False`.
 
   ```python
   s = 'I Love You'
@@ -507,9 +498,9 @@ categories:
   True
   ```
 
-### 3.用'空格'扩充字符串
+### *2.2.3. Expanding*
 
-- `str.ljust(width[, fillchar])`返回一个原字符串左对齐，并使用`fillchar`（默认空格）填充至长度width的新字符串。
+- `str.ljust(width[, fillchar])`: Return a string which aligned with the original string from the left and fill it with a new string of length `width` using `fillchar` (**default** space).
 
   ```python
   s = 'I Love You'
@@ -522,7 +513,7 @@ categories:
   'I Love You~~~~~'
   ```
 
-- `str.rjust(width[, fillchar])`返回一个原字符串右对齐，并使用`fillchar`（默认空格）填充至长度width的新字符串
+- `str.rjust(width[, fillchar])`: Return a string which aligned with the original string from the right and fill it with a new string of length `width` using `fillchar` (**default** space).
 
   ```python
   s = 'I Love You'
@@ -535,9 +526,9 @@ categories:
   '.....I Love You'
   ```
 
-### 4.字符串去头去尾操作
+### *2.2.4. Striping*
 
-- `str.lstrip([chars])` 截掉字符串左边的空格或指定字符。
+- `str.lstrip([chars])`: Remove spaces or specified characters at the start of the string.
 
   ```python
   s = 'I Love You'
@@ -550,7 +541,7 @@ categories:
   'I Love You'
   ```
 
-- `str.rstrip([chars])` 删除字符串末尾的空格或指定字符。
+- `str.rstrip([chars])`: Remove spaces or specified characters at the end of the string.
 
   ```python
   s = 'I Love You'
@@ -563,7 +554,7 @@ categories:
   'I Love You'
   ```
 
-- `str.strip([chars])` 在字符串上执行`lstrip()`和`rstrip()`。
+- `str.strip([chars])`: Perform both `lstrip()` and `rstrip()`。
 
   ```python
   s = 'I Love You'
@@ -576,9 +567,9 @@ categories:
   'I Love '
   ```
 
-### 5.分割字符串
+### *2.2.5. Segemntation*
 
-- `str.partition(sub)` 找到子字符串sub，把字符串分为一个三元组`(pre_sub,sub,fol_sub)`，如果字符串中不包含sub则返回`('原字符串','','')`。
+- `str.partition(sub)`: Find the substring `sub` and divides the string into a triplet`(pre_sub,sub,fol_sub)`. If the string does not contain `sub`, `('str','','')` is returned。
 
   ```python
   s = 'I Love You'
@@ -591,9 +582,9 @@ categories:
   ('I Love You', '', '')
   ```
 
-- `str.rpartition(sub)`类似于`partition()`方法，不过是从右边开始查找。
+- `str.rpartition(sub)` is similar to `str.partition() `，but it search **from the right**
 
-- `str.split(str="", num)` 不带参数默认是以空格为分隔符切片字符串，如果`num`参数有设置，则仅分隔`num`次，返回切片后的子字符串拼接的列表。
+- `str.split(str="", num)`: Slice the string with `str` (**default**: space) as the delimiter. If the `num` parameter is set, only `num` times are separated, and the list of concatenated substrings after slicing is returned.
 
   ```python
   s = 'I Love You'
@@ -606,9 +597,9 @@ categories:
   ['I', 'Love You']
   ```
 
-### 6.字符串替换操作
+### *2.2.6. Replace*
 
-- `replace(old, new [, max])` 把 将字符串中的`old`替换成`new`，如果`max`指定，则替换不超过`max`次。
+- `replace(old, new [, max])`: Replace `old` to `new`. If the `max` parameter is specified, not more than `max` `old` will be replaced (from left to right)。
 
   ```python
   s = 'I Love You'
@@ -621,9 +612,9 @@ categories:
   'I L0ve You'
   ```
 
-### 7.字符串操作符
+### *2.2.7. Operators*
 
-- `str1+str2`可以将两个字符串`str1`和`str2`合并成一个字符串
+- `str1+str2`: Merge `str1` and `str2` into one string.
 
   ```python
   s1 = 'Love'
@@ -636,14 +627,14 @@ categories:
 
   
 
-### 8.字符串规范化
+### *2.2.8. Formation of String*
 
-- 利用`format`方法实现字符串规范化`'... {key1:type1} ... {key2:type2} ...'.format(key1 = ch1, key2 = ch2)`
+- Format the string with `str.format()` method `'... {key1:type1} ... {key2:type2} ...'.format(key1 = ch1, key2 = ch2)`
 
-- 利用`%标识符`实现字符串规范化`'... %type1 ... %type2 ...'%(ch1, ch2)`
+- Format the string with `%` identifier `'... %type1 ... %type2 ...'%(ch1, ch2)`
 
-- 标识符含义：`<~>`表示自定义输入数值
-  - `%d`：整数 转 字符
+- Meanings of identifier：`<~>` represent the custom value.
+  - `%d`：integral --> character or string
   
     ```python
     s1 = '%d years old' % (23)
@@ -657,7 +648,7 @@ categories:
     23 years old
     ```
   
-  - `%c`：ASCII码 转 字符
+  - `%c`：ASCII --> character or string
   
     ```python
     s1 = 'It is %c' % (97)
@@ -671,11 +662,11 @@ categories:
     It is a
     ```
   
-  - `%o`：整数 转 8进制 转 字符
+  - `%o`：integral --> Octal number --> character or string
   
-  - `%x`：整数 转 16进制 转 字符
+  - `%x`：integral --> Hexadecimal number --> character or string (lowercase letter)
   
-  - `%X`：整数 转 16进制 转 字符（字母大写）
+  - `%X`：integral --> Hexadecimal number --> character or string (uppercase letter)
   
     ```python
     '%o' % (11)
@@ -691,7 +682,7 @@ categories:
     'B'
     ```
   
-  - `%.<k>f`： 保留`k`位小数 转 字符
+  - `%.<k>f`：Keep `k` decimal places --> character or string
   
     ```python
     '%.2f' % (11.4514)
@@ -699,7 +690,7 @@ categories:
     Out[9]: '11.45'
     ```
   
-  - `%<m>.<k>f`：保留`k`位小数 转 字符 并将字符串右移`m`位用空格补全
+  - `%<m>.<k>f`：Keep `k` decimal places --> character or string (right shift of string `m` bit with space filling)
   
     ```python
     '%8.2f' % (11.4514)
@@ -707,7 +698,7 @@ categories:
     '   11.45'
     ```
   
-  - `%.<k>e`：保留`k`位小数的科学计数法形式 转 字符
+  - `%.<k>e`：Scientific Notation Form with `k` Decimal Places --> character or string 
   
     ```python
     '%.3e' % (114514)
@@ -715,7 +706,7 @@ categories:
     '1.145e+05'
     ```
   
-  - `%<m>d`：整数转字符，并将字符串右移`m`位（`m`为负数则左移）
+  - `%<m>d`：integral --> character or string (right shift of string `m` bit with space filling, left shift if `m`<0）
   
     ```python
     '%4d' % (12)
@@ -726,9 +717,9 @@ categories:
     '12  '
     ```
   
-  - `%s`：直接填充字符串
+  - `%s`：Direct filling
   
-  - `%r`：将字符串作为引用内容加入（即`'...'str'...'`）
+  - `%r`：Add string as reference content（`'...'str'...'`）
   
     ```python
     'I say: %r' % ('I Love U!')
@@ -756,15 +747,15 @@ categories:
 
 
 
-### 9.字符类型判断与转化
+### *2.2.9. Type judgment and transformation*
 
-- `ch.isupper()`判断字符`ch`是否为大写字母
+- `ch.isupper()`: Check whether `ch` is uppercase or not.
 
-- `ch.islower()`判断字符`ch`是否为小写字母
+- `ch.islower()`: Check whether `ch` is lowercase or not.
 
-- `ch.isdigit()`判断字符`ch`是否为数字
+- `ch.isdigit()`: Check whether `ch` is number or not.
 
-- `ord(ch)`将字符`ch`转换为对应ASCII码
+- `ord(ch)`: Transform `ch` into corresponding ASCII
 
   ```python
   s = 'Ab4*'
@@ -787,11 +778,11 @@ categories:
 
   
 
-## 2.3 字典dict和默认字典defaultdict
+## 2.3 Dictionary and Default Dictionary
 
-### 1.创建字典
+### 2.3.1. Creation
 
-- `dict.fromkeys(seq[, value])` 用于创建一个新字典，以序列 `seq` 中元素做字典的键，`value` 为字典所有键对应的初始值。
+- `dict.fromkeys(seq[, value])`: Create a new dictionary，`seq` is keys of the dictionary，`value` is initial value of all keys。
 
   ```python
   seq = ['a', 'b', 'c']
@@ -800,7 +791,7 @@ categories:
   {'a': [1, 2, 3], 'b': [1, 2, 3], 'c': [1, 2, 3]}
   ```
 
-- `dict.setdefault(dict, key, default=None)`和`dict.get(dict, key, default=None)`, 如果键`key`不存在于字典中，将会添加键并将值设为默认值`default`。
+- `dict.setdefault(dict, key, default=None)` and `dict.get(dict, key, default=None)`: If `key` is not in the dictionary，`key` will be added and initialized with value `default`.
 
   ```python
   dic = {'a': 1, 'b': 2, 'c': 3}
@@ -810,13 +801,13 @@ categories:
   6
   ```
 
-- `collections.defaultdict(type)`，限定字典中值的数据类型为`type`，若键`key`不存在，将对应`val`值设置为对应的默认值：
+- `collections.defaultdict(type)`: Constraint the type `type` of value in the dictionary. If `key` doesn't exist，set value of `key` as default：
 
   ```python
   import collections
   ```
 
-  1.`list`对应`[]`
+  1.`list` -- `[]`
 
   ```python
   dic = collections.defaultdict(list)
@@ -825,7 +816,7 @@ categories:
   []
   ```
   
-  2.`int`对应`0`
+  2.`int` -- `0`
   
   ```python
   dic = collections.defaultdict(int)
@@ -834,7 +825,7 @@ categories:
   0
   ```
   
-  3.`str`对应`''`
+  3.`str` -- `''`
   
   ```python
   dic = collections.defaultdict(str)
@@ -843,7 +834,7 @@ categories:
   ''
   ```
   
-  4.`set`对应`set()`
+  4.`set` -- `set()`
   
   ```python
   dic = collections.defaultdict(set)
@@ -852,13 +843,13 @@ categories:
   set()
   ```
 
-### 2.字典的索引
+### *2.3.2. Index*
 
 ```python
 dic = {'a': 1, 'b': 2, 'c': 3}
 ```
 
-- 直接用`dict[key]`就能索引对应的值`val`。
+- `dict[key]`: Index the corresponding value of the `key` in the dictionary.
 
   ```python
   dic['b']
@@ -866,7 +857,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   2
   ```
 
-- `dict.keys()`返回一个可迭代对象，可以使用 `list()` 来转换为列表，列表为字典中的所有键。
+- `dict.keys()` returns all keys in the dictionary as a iterable object，which can be transformed into a list with `list()`.
 
   ```python
   dic.keys()
@@ -878,7 +869,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   ['a', 'b', 'c']
   ```
 
-- `dict.values()`返回一个可迭代对象，可以使用 `list()` 来转换为列表，列表为字典中的所有值。
+- `dict.values()` returns all values in the dictionary as a iterable object, which can be transformed into a list with `list()`.
 
   ```python
   dic.values()
@@ -890,7 +881,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   [1, 2, 3]
   ```
 
-- `key in dict` 用于判断键是否存在于字典中，如果键在字典 `dict `里返回`true`，否则返回`false`。而`not in`操作符刚好相反，如果键在字典 `dict` 里返回`false`，否则返回`true`。
+- `key in dict` or `key not in dict`: Check whether `key` is in the dictionary or not.
 
   ```python
   print('b' in dic)
@@ -910,13 +901,13 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   True
   ```
 
-### 3.字典的删除操作
+### *2.2.3. Delete*
 
 ```python
 dic = {'a': 1, 'b': 2, 'c': 3}
 ```
 
-- `dict.pop(key[,default])`删除字典给定键 `key` 所对应的值，返回值为被删除的值。`key` 值必须给出。若`key`不存在，则返回 `default` 值。
+- `dict.pop(key[,default])`: Delete corresponding value of the `key`，returning deleted value. `key` must be provided. If `key` doesn't exist，return `default`。
 
   ```python
   dic = {'a': 1, 'b': 2, 'c': 3}
@@ -935,7 +926,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   {'b': 2, 'c': 3}
   ```
 
-- `del dict[key]` 删除字典给定键 `key` 所对应的值。
+- `del dict[key]`: Delete corresponding value of the `key`.
 
   ```python
   del dic['b']
@@ -944,7 +935,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   {'a': 1, 'c': 3}
   ```
 
-- `dict.popitem()`随机返回并删除字典中的一对键和值，如果字典已经为空，却调用了此方法，就报出`KeyError`异常。
+- `dict.popitem()`: Randomly return and delete a set of key and corresponding value as `(key, value)`. If the dictionary is null, return `KeyError`.
 
   ```python
   dic = {'a': 1, 'b': 2, 'c': 3}
@@ -958,7 +949,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   {'a': 1, 'b': 2}
   ```
 
-- `dict.clear()`用于删除字典内所有元素。
+- `dict.clear()`: Delete all.
 
   ```python
   dic.clear()
@@ -967,9 +958,9 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   {}
   ```
 
-### 4.字典的拓展
+### *2.3.4. Expanding*
 
-- `dict.update(dict2)`把字典参数 `dict2` 的` key:value`对 更新到字典 `dict` 里。
+- `dict.update(dict2)` update `dict` with `key:value` in `dict2`.
 
   ```python
   dic = {'a': 1, 'b': 2, 'c': 3}
@@ -982,16 +973,16 @@ dic = {'a': 1, 'b': 2, 'c': 3}
 
   
 
-## 2.4 集合set
+## 2.4 Set
 
-### 1.集合的创建
+### *2.4.1. Creation*
 
-- `set()`创建空集合
-- `set={a,b,c,...}`创建含元素的集合，不能使用`{}`，会默认创建字典
+- `set()`: Create a null set. `{}` is not ok, because it will be seem as dictionary.
+- `set={a,b,c,...}`: Create a set with elements.
 
 ### 2.集合添加元素
 
-- `set.add(element)`将元素`element`添加到集合中，原集合中存在的元素不重复添加
+- `set.add(element)`: Add `element` into the `set`. Existed element will not be added repeatly.
 
   ```python
   s = set()
@@ -1006,7 +997,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   {1}
   ```
 
-- `set.update(set2)`将`set2`中的元素添加到集合中，原集合中存在的元素不重复添加
+- `set.update(set2)` add elements of `set2` into `set1`. Existed elements will not be added repeatly.
 
   ```python
   s = {1,2,3}
@@ -1019,7 +1010,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
 
 ### 3.集合删除元素
 
-- `set.remove(item) `用于移除集合中的指定元素。如果元素不存在，则会报错。
+- `set.remove(item) `: Remove `item` in the `set`. **`item` must exist in the `set`**
 
   ```python
   s = {1,2,3}
@@ -1029,7 +1020,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   {1, 3}
   ```
 
-- `set.discard(value)` 用于移除指定的集合元素。`remove()` 方法在移除一个不存在的元素时会发生错误，而 `discard()` 方法不会。
+- `set.discard(value)` Remove `value` in the `set`。 **`value` doesn't need to exist in the `set`**
 
   ```python
   s = {1,2,3}
@@ -1044,7 +1035,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   {1, 3}
   ```
 
-- `set.pop()` 用于随机移除一个元素。
+- `set.pop()`: Randomly remove an element in the `set`.
 
   ```python
   s = {1,2,3}
@@ -1054,14 +1045,14 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   {2, 3}
   ```
 
-### 4.数学集合运算
+### *2.2.4. Mathametical Operation*
 
 ```python
 set1 = {1, 2, 3, 4}
 set2 = {2, 4, 6, 8}
 ```
 
-- `set = set1.intersection(set2)`或`set = set1 & set2`  返回两个集合的交集。
+- `set = set1.intersection(set2)` or `set = set1 & set2`: $set1 \cap set2$
 
   ```python
   set = set1.intersection(set2)
@@ -1075,9 +1066,9 @@ set2 = {2, 4, 6, 8}
   {2, 4}
   ```
 
-- `set1.intersection_update(set2)` 交集，在原始的集合`set1`上移除不重叠的元素。
+- `set1.intersection_update(set2)`: Remove non-overlapping elements to update `set1`.
 
-- `set = set1.union(set2)` 或`set = set1 | set2` 返回两个集合的并集。
+- `set = set1.union(set2)` or `set = set1 | set2`: $set1 \cup set2$
 
   ```python
   set = set1.union(set2)
@@ -1091,7 +1082,7 @@ set2 = {2, 4, 6, 8}
   {1, 2, 3, 4, 6, 8}
   ```
 
-- `set = set1.difference(set2)` 或`set = set1 - set2` 返回集合的差集。
+- `set = set1.difference(set2)` or `set = set1 - set2`: Return difference of two sets
 
   ```python
   set = set1.difference(set2)
@@ -1105,9 +1096,9 @@ set2 = {2, 4, 6, 8}
   {1, 3}
   ```
 
-- `set1.difference_update(set2)` 集合的差集，直接在原来的集合`set1`中移除元素，没有返回值。
+- `set1.difference_update(set2)` update `set1` to the difference of two sets.
 
-- `set1.issuperset(set2)`或`set1 >= set2` 用于判断集合是不是包含其他集合，如果是则返回 `True`，否则返回 `False`。
+- `set1.issuperset(set2)` or `set1 >= set2`: Check whether $set2 \subset set1$ or not.
 
   ```python
   set1.issuperset(set2)
@@ -1119,7 +1110,7 @@ set2 = {2, 4, 6, 8}
   False
   ```
 
-- `set1.isdisjoint(set2)` 用于判断两个集合是不是不相交，如果是返回` True`，否则返回` False`。
+- `set1.isdisjoint(set2)`: Check two sets are intersect or not.
 
   ```python
   set1.isdisjoint(set2)
@@ -1129,22 +1120,18 @@ set2 = {2, 4, 6, 8}
 
 ## 2.5 元组tuple
 
-- 创建方式：`tuple=(a,b,[c,d],...)`
+- Creation：`tuple=(a,b,[c,d],...)`
 
-- 索引方式`index=start:stop:step`或`index=num`
-  - `start`为起始索引，`stop`为结束索引，`step`为索引步长
-  - 索引序列为：{start, start**+step**, start**+2*step**, ..., start**+n\*step**, **stop-1** }
-  - 索引序列为{0, 1, 2, ..., 列表长度-1}或{-列表长度, ..., -2, -1}
-  - `:`表示索引所有元素，`tuple[a:]`表示从下标a索引到末尾
+- Index like **List**
   
-- 元组常用操作符
+- Operators
 
-  ```pythong 
+  ```python 
   tup1 = (1, 2, [3, 4])
   tup2 = ({'a':1, 'b':2, 'c':3}, {4, 5, 6}, 2, [3, 4])
   ```
 
-  - `+` -- `tuple = tuple1+tuple2`，将`tuple1`和`tuple2`拼接成新元组`tuple`
+  - `+` -- `tuple = tuple1+tuple2`: Concatenate
 
     ```python
     tup = tup1 + tup2
@@ -1153,7 +1140,7 @@ set2 = {2, 4, 6, 8}
     (1, 2, [3, 4], {'a': 1, 'b': 2, 'c': 3}, {4, 5, 6}, 2, [3, 4])
     ```
 
-  - `*`-- `tuple = tuple1*3`，将`tuple1`的内容复制三份并拼接成新元组`tuple`，支持自乘`*=`运算
+  - `*`-- `tuple = tuple1*3`: Copy and Concatenate
 
     ```python
     tup = tup1 * 3
@@ -1167,15 +1154,15 @@ set2 = {2, 4, 6, 8}
     (1, 2, [3, 4], 1, 2, [3, 4], 1, 2, [3, 4])
     ```
 
-  - `in`和`not in` -- `res = obj in tuple` 和 `res = obj not in tuple`, 判断元素`obj`是否在或着不在元组`tuple`中，返回`bool`值`res = True`或`res = False`
+  - `in`和`not in` -- `res = obj in tuple` or `res = obj not in tuple`: Check Existence
 
-- 元组大小和内容都不可更改，只存在查询操作：
+- Tuple cannot be changed, but queried
   
   ```python
   tup = (1, 2, [3, 4], {'a': 1, 'b': 2, 'c': 3}, {4, 5, 6}, 2, [3, 4])
   ```
   
-  - `num=tuple.count(obj)`统计元组`tuple`中`obj`元素的数目`num`
+  - `num=tuple.count(obj)`: Count number of `obj` in the `tuple`
   
     ```python
     num = tup.count([3,4])
@@ -1184,7 +1171,7 @@ set2 = {2, 4, 6, 8}
     2
     ```
   
-  - `ind=tuple.index(obj)`索引元素`obj`在元组`tuple`中的**从左往右首次出现**的下标`ind`
+  - `ind=tuple.index(obj)`: Find the index of `obj` that firstly appears from left to right in the `tuple`
   
     ```python
     ind = tup.index([3,4])
@@ -1193,22 +1180,22 @@ set2 = {2, 4, 6, 8}
     2
     ```
   
-- 解压元组：**按元组结构定义变量**并将元组元素赋值给对应变量
+- Unzip：Assign elements of the tuple to corresponding variable **based on the structure of the tuple**
 
   ```python
   tup = (1, 2, [3, 4], {'a': 1, 'b': 2, 'c': 3}, {4, 5, 6})
   (a,b,[c,d],dic,s) = tup
   ```
 
-## 2.6 通用操作
+## 3 General Operations
 
-- `len(s)`返回对象（字符、列表、元组等）长度或元素个数。
+- `len(s)`: Return the number of elements.
 
-- `sorted(iterable, key=None, reverse=False)`对所有可迭代的对象进行排序操作。
+- `sorted(iterable, key=None, reverse=False)`: Sort any iterable object.
 
-  `iterable` -- 可迭代对象。
-  `key` -- 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。常用`lambda x: f(x)`语法表达，表示排序对象为`x`，排序依据为`f(x)`
-  `reverse` -- 排序规则，`reverse = True` 降序 ， `reverse = False` 升序（默认）。
+  `iterable` -- iterable object
+  `key` -- Basis for sort. `lambda x: f(x)`: sort `x` based on `f(x)`
+  `reverse` -- `reverse = True` descend order， `reverse = False` ascend order（default）。
 
   ```python
   dic = {'a':2, 'b':5, 'c':1}
@@ -1217,9 +1204,9 @@ set2 = {2, 4, 6, 8}
   ['c', 'a', 'b']
   ```
 
-- `reversed(seq)`函数返回一个反转的迭代器，`seq` -- 要转换的序列，可以是 tuple, str, list 或 range。
+- `reversed(seq)`: Return a reversed sequence，`seq` can be tuple, str, list or range。
 
-- `enumerate(sequence, [start=0])`形成将序列`sequence`的内容和对应下标组成元组`(i, sequence[i])`
+- `enumerate(sequence, [start=0])`: Create a tuple `((0,sequence[0]),...)` with combination of the index `i` and corresponding value`sequence[i]`
 
   ```python
   s = ['a', 'b', 'c']
@@ -1231,7 +1218,7 @@ set2 = {2, 4, 6, 8}
   2 c
   ```
 
-- `zip(iter1 [,iter2 [...]])`将多个序列对应的元素打包成元组，返回长度与较短序列长度一致，可通过`*zip(archive)`进行解压
+- `zip(iter1 [,iter2 [...]])`: Zip coresponding element of multiple sequences into a tuple `((seq1[0],seq2[0],seq3[0]),(seq1[1],seq2[1],seq3[1]),...)`, which can be unzipped by `*zip()`
 
   ```python
   s1 = [1, 2, 3]
