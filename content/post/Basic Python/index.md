@@ -1218,7 +1218,7 @@ set2 = {2, 4, 6, 8}
   2 c
   ```
 
-- `zip(iter1 [,iter2 [...]])`: Zip coresponding element of multiple sequences into a tuple `((seq1[0],seq2[0],seq3[0]),(seq1[1],seq2[1],seq3[1]),...)`, which can be unzipped by `*zip()`
+- `zip(iter1 [,iter2 [...]])`: Zip corresponding element of multiple sequences into a tuple `((seq1[0],seq2[0],seq3[0]),(seq1[1],seq2[1],seq3[1]),...)`, which can be unzipped by `*zip()`
 
   ```python
   s1 = [1, 2, 3]
