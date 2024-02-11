@@ -1,3 +1,4 @@
+---
 title: Data Structures in Python
 subtitle: Basic introduction and operation for all kinds of data structure based on Python.
 
@@ -36,6 +37,7 @@ tags:
 
 categories:
   - Basic Learning
+---
 
 # **1 基本概念以及对比**
 
