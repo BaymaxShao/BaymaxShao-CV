@@ -1,9 +1,9 @@
 ---
-title: Data Structures in Python
+title: Basic Data Operation in Python
 subtitle: Basic introduction and operation for all kinds of data structure based on Python.
 
 # Summary for listings and search engines
-summary: This article summarizes the characteristics and operations of various basic data structures in Python, such as lists and dictionaries, using simple examples.
+summary: This post summarizes the characteristics and operations of various basic data structures in Python, such as lists and dictionaries with simple examples. Meanwhile, the operation of strings, which is also frequently used, is introduced in this post.
 
 # Link this post with a project
 projects: []
