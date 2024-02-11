@@ -90,7 +90,7 @@ categories:
     [0, 0, 0, 0, 0]
     ```
 
-### *2.1.2. Index*
+### *2.1.2. Indexing*
 
 - `index=start:stop:step` or `index=num`
   
@@ -597,7 +597,7 @@ categories:
   ['I', 'Love You']
   ```
 
-### *2.2.6. Replace*
+### *2.2.6. Replacing elements*
 
 - `replace(old, new [, max])`: Replace `old` to `new`. If the `max` parameter is specified, not more than `max` `old` will be replaced (from left to right)。
 
@@ -627,7 +627,7 @@ categories:
 
   
 
-### *2.2.8. Formation of String*
+### *2.2.8. Formatting of String*
 
 - Format the string with `str.format()` method `'... {key1:type1} ... {key2:type2} ...'.format(key1 = ch1, key2 = ch2)`
 
@@ -747,7 +747,7 @@ categories:
 
 
 
-### *2.2.9. Type judgment and transformation*
+### *2.2.9. Type Judgment and Transformation*
 
 - `ch.isupper()`: Check whether `ch` is uppercase or not.
 
@@ -780,7 +780,7 @@ categories:
 
 ## 2.3 Dictionary and Default Dictionary
 
-### 2.3.1. Creation
+### *2.3.1. Creation*
 
 - `dict.fromkeys(seq[, value])`: Create a new dictionary，`seq` is keys of the dictionary，`value` is initial value of all keys。
 
@@ -843,7 +843,7 @@ categories:
   set()
   ```
 
-### *2.3.2. Index*
+### *2.3.2. Indexing*
 
 ```python
 dic = {'a': 1, 'b': 2, 'c': 3}
@@ -901,7 +901,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   True
   ```
 
-### *2.2.3. Delete*
+### *2.2.3. Deleting Elements*
 
 ```python
 dic = {'a': 1, 'b': 2, 'c': 3}
@@ -980,7 +980,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
 - `set()`: Create a null set. `{}` is not ok, because it will be seem as dictionary.
 - `set={a,b,c,...}`: Create a set with elements.
 
-### 2.集合添加元素
+### *2.2.2. Adding Elements*
 
 - `set.add(element)`: Add `element` into the `set`. Existed element will not be added repeatly.
 
@@ -1008,8 +1008,7 @@ dic = {'a': 1, 'b': 2, 'c': 3}
   {1, 2, 3, 4, 5}
   ```
 
-### 3.集合删除元素
-
+### *2.2.3. Deleting Elements*
 - `set.remove(item) `: Remove `item` in the `set`. **`item` must exist in the `set`**
 
   ```python
@@ -1118,7 +1117,7 @@ set2 = {2, 4, 6, 8}
   False
   ```
 
-## 2.5 元组tuple
+## 2.5 Tuple
 
 - Creation：`tuple=(a,b,[c,d],...)`
 
@@ -1154,7 +1153,7 @@ set2 = {2, 4, 6, 8}
     (1, 2, [3, 4], 1, 2, [3, 4], 1, 2, [3, 4])
     ```
 
-  - `in`和`not in` -- `res = obj in tuple` or `res = obj not in tuple`: Check Existence
+  - `in` and `not in` -- `res = obj in tuple` and `res = obj not in tuple`: Check Existence
 
 - Tuple cannot be changed, but queried
   
@@ -1218,7 +1217,7 @@ set2 = {2, 4, 6, 8}
   2 c
   ```
 
-- `zip(iter1 [,iter2 [...]])`: Zip corresponding element of multiple sequences into a tuple `((seq1[0],seq2[0],seq3[0]),(seq1[1],seq2[1],seq3[1]),...)`, which can be unzipped by `*zip()`
+- `zip(iter1 [,iter2 [...]])`: Zip corresponding element of multiple sequences into a tuple `((seq1[0],seq2[0],seq3[0]),(seq1[1],seq2[1],seq3[1]),...)`, which can be unzipped by  `*zip()`
 
   ```python
   s1 = [1, 2, 3]
