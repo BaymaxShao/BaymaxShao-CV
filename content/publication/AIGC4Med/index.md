@@ -34,7 +34,7 @@ summary:
 
 tags:
 - Medical AIGC
-featured: false
+featured: true
 
 # links:
 # - name: ""
