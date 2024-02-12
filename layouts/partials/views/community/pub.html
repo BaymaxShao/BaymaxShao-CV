@@ -41,22 +41,11 @@
     {{ partial "page_metadata" (dict "page" $item "is_list" 1) }}
   {{ end }}
 
-  {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
-  {{ $anchor := $item.Params.image.focal_point | default "Smart" }}
-  {{ with $resource }}
-    {{ $image := .Fill (printf "1000x500 %s" $anchor) }}
-    {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
-    <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
-      <div class="img-hover-zoom">
-        <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
-            class="article-banner" alt="{{ $item.Title }}" loading="lazy">
-      </div>
-    </a>
-  {{end}}
+  <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>.
 
-  <div class="section-subheading article-title mb-1 mt-3">
+  <!-- <div class="section-subheading article-title mb-1 mt-3">
     <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
-  </div>
+  </div> -->
 
   <!-- {{ with $summary }}
   <a href="{{ $link }}" {{ $target | safeHTMLAttr }} class="summary-link">
@@ -71,5 +60,18 @@
     {{ partial "page_links" (dict "page" $item "is_list" 1) }}
   </div>
   {{ end }}
+
+  {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+  {{ $anchor := $item.Params.image.focal_point | default "Smart" }}
+  {{ with $resource }}
+    {{ $image := .Fill (printf "1000x600 %s" $anchor) }}
+    {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+    <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
+      <div class="img-hover-zoom">
+        <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
+            class="article-banner" alt="{{ $item.Title }}" loading="lazy">
+      </div>
+    </a>
+  {{end}}
 
 </div>
