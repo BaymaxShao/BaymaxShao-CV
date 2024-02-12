@@ -83,7 +83,7 @@
       <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
         <div class="img-hover-zoom">
             <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
-                class="article-banner" alt="{{ $item.Title }}" loading="lazy">
+                class="article-banner" alt="{{ $item.Title }}" loading="lazy" style="width: 540px; height: auto; object-fit: cover;">
         </div>
       </a>
     {{end}}
