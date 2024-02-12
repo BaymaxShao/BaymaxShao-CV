@@ -1,5 +1,6 @@
 {{ $item := .item }}
 {{ $has_attachments := partial "functions/has_attachments" $item }}
+{{ $link := $item.RelPermalink }}
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
   <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
@@ -40,7 +41,7 @@
   {{ end }}
 
   {{ end }}
-  
+
   <div class="ml-3">
     {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
     {{ with $resource }}
