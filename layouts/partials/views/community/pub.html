@@ -78,11 +78,11 @@
   <div class="col-12 col-md-6">
     {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
     {{ with $resource }}
-      {{ $image := . }}
+      {{ $image := .Resize "550x" }}
       {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
       <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
         <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
-            class="article-banner" alt="{{ $item.Title }}" loading="lazy" style="width: 800px; height: auto; object-fit: cover;">
+            class="article-banner" alt="{{ $item.Title }}" loading="lazy">
       </a>
     {{end}}
   </div>
