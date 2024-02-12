@@ -32,7 +32,7 @@ summary:
 
 tags:
 - Medical Metaverse
-featured: false
+featured: true
 
 # links:
 # - name: ""
