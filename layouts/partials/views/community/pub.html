@@ -8,6 +8,7 @@
 {{ end }}
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem">
+  <div class="media-body">
   <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
 
   {{/* APA Style */}}
@@ -46,6 +47,8 @@
   {{ end }}
 
   {{ end }}
+
+  </div>
 
   <div class="ml-3">
     {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
