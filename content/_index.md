@@ -106,7 +106,7 @@ sections:
         exclude_featured: false
     design:
       columns: '2'
-      view: card
+      view: community/pub
 
   - block: portfolio
     id: projects
