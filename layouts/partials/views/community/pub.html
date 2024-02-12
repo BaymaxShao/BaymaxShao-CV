@@ -27,14 +27,14 @@
 
 {{ $has_attachments := partial "functions/has_attachments" $item }}
 
-{{ $order := "" }}
+<!-- {{ $order := "" }}
 {{ if isset $widget "Params" }}
   {{ if and ($widget.Params.design.flip_alt_rows | default true) (not (modBool $index 2)) }}
     {{ $order = "order-md-2" }}
   {{ end }}
 {{ else if and ($widget.design.flip_alt_rows | default true) (not (modBool $index 2)) }}
   {{ $order = "order-md-2" }}
-{{ end }}
+{{ end }} -->
 
 <!-- {{/* Get summary. */}}
 {{ $summary := "" }}
@@ -93,15 +93,15 @@
 
   </div>
 
-  <div class="col-12 col-md-6 order-first {{$order}}">
+  <div class="col-12 col-md-6">
     {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
 
     {{ with $resource }}
       {{ $image := . }}
-      {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "resize 540x webp" }}{{ end }}
+      {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "resize 800x webp" }}{{ end }}
       {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
         <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
-            alt="{{ $item.Title }}" loading="lazy" style="width: 540px; height: auto; object-fit: cover;">
+            alt="{{ $item.Title }}" loading="lazy" style="width: 800px; height: auto; object-fit: cover;">
       {{if $do_link}}</a>{{end}}
     {{end}}
   </div>
