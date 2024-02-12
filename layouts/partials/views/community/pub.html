@@ -82,7 +82,7 @@
       {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
       <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
         <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
-            class="article-banner" alt="{{ $item.Title }}" loading="lazy" style="width: 540px; height: auto; object-fit: cover;">
+            class="article-banner" alt="{{ $item.Title }}" loading="lazy" style="width: 800px; height: auto; object-fit: cover;">
       </a>
     {{end}}
   </div>
