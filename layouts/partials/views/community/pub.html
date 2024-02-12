@@ -92,17 +92,17 @@
     {{ end }}
 
   </div>
-
-  <div class="col-12 col-md-6">
+  <div class="ml-3">
     {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
-
     {{ with $resource }}
-      {{ $image := . }}
-      {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "resize 800x webp" }}{{ end }}
-      {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
+      {{ $image := .Resize "300x" }}
+      {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+      <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
         <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
-            alt="{{ $item.Title }}" loading="lazy" style="width: 800px; height: auto; object-fit: cover;">
-      {{if $do_link}}</a>{{end}}
+            alt="{{ $item.Title }}" loading="lazy">
+      </a>
     {{end}}
   </div>
+
+  
 </div>
