@@ -64,7 +64,7 @@
   {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
   <!-- {{ $anchor := $item.Params.image.focal_point | default "Smart" }} -->
   {{ with $resource }}
-    {{ $image := .Fill (printf "1100x500x %s") }}
+    {{ $image := .Fill (printf "1000x479 %s") }}
     {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
     <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>
       <div class="img-hover-zoom">
