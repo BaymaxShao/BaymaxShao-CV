@@ -1,5 +1,5 @@
 {{ $item := .item }}
-
+{{ $widget := .page }}
 {{/* Dynamic view adjusts to content type. */}}
 {{ $show_authors_only := false }}{{/* Show authors only or full metadata? */}}
 {{ $link := $item.RelPermalink }}
@@ -88,8 +88,6 @@
     {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
 
     {{ with $resource }}
-      {{/* Use CSS to expand images to consistent widths rather than just Hugo as Hugo can significantly increase the
-      filesize of GIFs when processing them, e.g. 400kB --> 1.5MB */}}
       {{ $image := . }}
       {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "resize 540x webp" }}{{ end }}
       {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
