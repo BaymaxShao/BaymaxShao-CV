@@ -76,6 +76,7 @@
   </div>
   <div class="ml-3">
     {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+    {{ $anchor := $item.Params.image.focal_point | default "Smart" }}
     {{ with $resource }}
       {{ $image := .Fill (printf "800x400 %s" $anchor) }}
       {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
