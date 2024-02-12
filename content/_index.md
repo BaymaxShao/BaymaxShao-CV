@@ -99,7 +99,7 @@ sections:
   - block: collection
     id: pub
     content:
-      title: Publications
+      title: Selected Publications
       filters:
         folders:
           - publication
