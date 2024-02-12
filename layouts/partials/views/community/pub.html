@@ -32,7 +32,7 @@
   <div class="media-body">
 
 
-    <a href="{{$link}}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
+    <a href="{{ $item.RelPermalink }}">{{ $item.Title }}</a>.
 
 
     <!-- {{ with $summary }}
