@@ -18,6 +18,15 @@
 
 {{ $has_attachments := partial "functions/has_attachments" $item }}
 
+{{ $order := "" }}
+{{ if isset $widget "Params" }}
+  {{ if and ($widget.Params.design.flip_alt_rows | default true) (not (modBool $index 2)) }}
+    {{ $order = "order-md-2" }}
+  {{ end }}
+{{ else if and ($widget.design.flip_alt_rows | default true) (not (modBool $index 2)) }}
+  {{ $order = "order-md-2" }}
+{{ end }}
+
 <!-- {{/* Get summary. */}}
 {{ $summary := "" }}
 {{ if $item.Params.summary }}
@@ -75,15 +84,18 @@
 
   </div>
 
-  <div class="m1-3">
+  <div class="col-12 col-md-6 order-first {{$order}}">
     {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+
     {{ with $resource }}
-      {{ $image := .Resize "150x" }}
-      {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
-      <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
+      {{/* Use CSS to expand images to consistent widths rather than just Hugo as Hugo can significantly increase the
+      filesize of GIFs when processing them, e.g. 400kB --> 1.5MB */}}
+      {{ $image := . }}
+      {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "resize 540x webp" }}{{ end }}
+      {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
         <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
-            class="article-banner" alt="{{ $item.Title }}" loading="lazy">
-      </a>
+            alt="{{ $item.Title }}" loading="lazy" style="width: 540px; height: auto; object-fit: cover;">
+      {{if $do_link}}</a>{{end}}
     {{end}}
   </div>
 </div>
