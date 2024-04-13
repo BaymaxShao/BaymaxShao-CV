@@ -22,7 +22,7 @@ publishDate: "2023-03-12T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*Journal of Mechanics in Medicine and Biology*, 23(02):2350028"
+publication: "*Journal of Mechanics in Medicine and Biology*, 23(02):2350028 *(MOST READ ARTICLE OF THE JOURNAL)*"
 publication_short: ""
 
 abstract: Currently, medical technology is developing rapidly and more medical problems are being solved. However, the shortage of medical resources and the high cost of medical care have become severe medical problems in response to the needs of patients. The continuous improvement of medical experience and quality is one of the most critical issues and is widely valued. The metaverse is an emerging digital space that integrates all kinds of technologies, including artificial intelligence, virtual reality, augmented reality, internet technology, blockchain and digital twin, etc. These technologies can ensure an immersive experience in the metaverse for humans to complete various tasks efficiently. Many fields, including video games, industrial production and medical service, have started to pay attention to the application of the metaverse. In the medical field, medical personnel can use the metaverse to achieve efficient diagnosis, education and treatments. And the interaction between medical personnel and patients in digital space can be strong. In this paper, we review the technologies and the applications of the metaverse and explore the potential of the metaverse in healthcare from several application scenarios. Based on this, the current challenges are analyzed and the possible solutions are proposed as the future direction of medical metaverse.
