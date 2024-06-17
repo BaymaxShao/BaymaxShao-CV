@@ -32,7 +32,7 @@ summary:
 
 tags:
 - 3D Human Reconstruction
-featured: false
+featured: true
 
 # links:
 # - name: ""
